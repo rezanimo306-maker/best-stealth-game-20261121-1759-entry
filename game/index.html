@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shadow Vault — a top-down stealth game</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #070a14;
+    color: #e8ecf4;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: 0.14em;
+    color: #b7a8ff;
+  }
+  h1 span { color: #37e0ff; }
+  canvas {
+    display: block;
+    width: 960px;
+    max-width: 96vw;
+    height: auto;
+    background: #0d1120;
+    border: 2px solid #2c3450;
+    border-radius: 8px;
+    image-rendering: pixelated;
+    cursor: crosshair;
+  }
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    justify-content: center;
+    font-size: 13px;
+    color: #9aa7c4;
+  }
+  .controls b { color: #e8ecf4; }
+  .tip {
+    font-size: 13px;
+    color: #7c8aa8;
+    text-align: center;
+    max-width: 960px;
+  }
+</style>
+</head>
+<body>
+  <h1>SHADOW <span>VAULT</span></h1>
+  <canvas id="game" width="960" height="640"></canvas>
+  <div class="controls">
+    <span><b>WASD / arrows</b> move</span>
+    <span><b>Shift</b> sneak</span>
+    <span><b>Click</b> throw a coin</span>
+    <span><b>P</b> pause</span>
+    <span><b>M</b> mute</span>
+    <span><b>Enter</b> start / continue</span>
+  </div>
+  <p class="tip">
+    Collect all 3 shards on each floor, then reach the glowing EXIT unseen.
+    Guards patrol with vision cones &mdash; crates block their sight, shadows hide you,
+    and a thrown coin pulls a guard away. If the alarm trips, break line of sight until it cools down.
+  </p>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

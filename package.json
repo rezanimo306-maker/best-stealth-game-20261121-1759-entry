@@ -1,0 +1,1 @@
+{"description":"Shadow Vault — a top-down 2D stealth game: slip past patrolling guards, collect the shards, reach the exit unseen.","engines":{"node":">=22"},"name":"shadow-vault","private":true,"scripts":{"build":"node main.ts"},"type":"module","version":"1.0.0"}
